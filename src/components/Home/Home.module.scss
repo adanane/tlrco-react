@@ -1,0 +1,14 @@
+.Home {
+  .Jumbotron {
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url("../../images/home.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    color: whitesmoke;
+    height: 100vh;
+    justify-content: center;
+    padding: auto;
+  }
+}
