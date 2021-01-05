@@ -6,7 +6,7 @@ const About: React.FC = () => (
   <div className={styles.About} id="about">
     <Container fluid>
       <Row className="justify-content-center">
-        <Col xs={6}>
+        <Col lg={6}>
           <p className="h2">We Are</p>
           <p>Creators, innovators and multi-disciplined social movers.</p>
           <p className="h2">Our Service</p>

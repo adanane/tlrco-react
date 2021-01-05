@@ -6,9 +6,9 @@ const Manifesto: React.FC = () => (
   <div className={styles.Manifesto}>
     <Container fluid>
       <Row className="justify-content-center">
-        <Col xs={6}>
+        <Col lg={6}>
           <p className="h2">Manifesto</p>
-          <ol>
+          <ol className="text-justify">
             <li>
               We aim to have an interdisciplinary style. We will study each idea
               from various viewpoints and represent other lifestyles and ethos

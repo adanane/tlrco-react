@@ -5,8 +5,8 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import * as yup from "yup";
 
 const schema = yup.object({
-  firstName: yup.string().required(),
-  lastName: yup.string().required(),
+  name: yup.string().required(),
+  email: yup.string().email().required(),
   comment: yup.string().required().min(25),
 });
 
@@ -14,7 +14,7 @@ const Contact: React.FC = () => (
   <div className={styles.Contact} id="contact">
     <Container fluid>
       <Row className="justify-content-center">
-        <Col xs={6}>
+        <Col lg={6}>
           <p className="h2">Contact Us</p>
           <p>Feel free to contact for any suggestion.</p>
         </Col>
@@ -24,8 +24,8 @@ const Contact: React.FC = () => (
       validationSchema={schema}
       onSubmit={console.log}
       initialValues={{
-        firstName: "",
-        lastName: "",
+        name: "",
+        email: "",
         comment: "",
       }}
     >
@@ -40,40 +40,40 @@ const Contact: React.FC = () => (
       }) => (
         <Form noValidate onSubmit={handleSubmit}>
           <Form.Row className="justify-content-center">
-            <Form.Group as={Col} xs={4} controlId="FirstName">
-              <Form.Label>First name</Form.Label>
+            <Form.Group as={Col} xs={4} controlId="name">
+              <Form.Label>Name</Form.Label>
               <Form.Control
                 as="input"
                 type="text"
-                placeholder="Write your first name here"
-                name="firstName"
-                value={values.firstName}
+                placeholder="Write your name here"
+                name="name"
+                value={values.name}
                 onBlur={handleBlur}
                 onChange={handleChange}
-                isValid={touched.firstName && !errors.firstName}
-                isInvalid={touched.firstName && !!errors.firstName}
+                isValid={touched.name && !errors.name}
+                isInvalid={touched.name && !!errors.name}
               />
               <Form.Control.Feedback type="invalid" tooltip>
-                Please enter your first name.
+                Please enter your name.
               </Form.Control.Feedback>
             </Form.Group>
           </Form.Row>
           <Form.Row className="justify-content-center">
-            <Form.Group as={Col} xs={4} controlId="LastName">
-              <Form.Label>Last name</Form.Label>
+            <Form.Group as={Col} xs={4} controlId="email">
+              <Form.Label>E-mail</Form.Label>
               <Form.Control
                 as="input"
-                type="text"
-                placeholder="Write your last name here"
-                name="lastName"
-                value={values.lastName}
+                type="email"
+                placeholder="Write your e-mail here"
+                name="email"
+                value={values.email}
                 onBlur={handleBlur}
                 onChange={handleChange}
-                isValid={touched.lastName && !errors.lastName}
-                isInvalid={touched.lastName && !!errors.lastName}
+                isValid={touched.email && !errors.email}
+                isInvalid={touched.email && !!errors.email}
               />
               <Form.Control.Feedback type="invalid" tooltip>
-                Please enter your last name.
+                Please enter your e-mail.
               </Form.Control.Feedback>
             </Form.Group>
           </Form.Row>
