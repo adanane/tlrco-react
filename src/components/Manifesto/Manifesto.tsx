@@ -3,7 +3,7 @@ import styles from "./Manifesto.module.scss";
 import { Col, Container, Row } from "react-bootstrap";
 
 const Manifesto: React.FC = () => (
-  <div className={styles.Manifesto}>
+  <div className={styles.Manifesto} id="manifesto">
     <Container fluid>
       <Row className="justify-content-center">
         <Col lg={6}>
