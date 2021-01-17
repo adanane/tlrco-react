@@ -11,7 +11,7 @@ const schema = yup.object({
 });
 
 const Contact: React.FC = () => (
-  <div className={styles.Contact} id="contact">
+  <section className={styles.Contact} id="contact">
     <Container fluid>
       <Row className="justify-content-center">
         <Col lg={6}>
@@ -40,7 +40,7 @@ const Contact: React.FC = () => (
       }) => (
         <Form noValidate onSubmit={handleSubmit}>
           <Form.Row className="justify-content-center">
-            <Form.Group as={Col} xs={4} controlId="name">
+            <Form.Group as={Col} lg={4} md={6} xs={8} controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 as="input"
@@ -59,7 +59,7 @@ const Contact: React.FC = () => (
             </Form.Group>
           </Form.Row>
           <Form.Row className="justify-content-center">
-            <Form.Group as={Col} xs={4} controlId="email">
+            <Form.Group as={Col} lg={4} md={6} xs={8} controlId="email">
               <Form.Label>E-mail</Form.Label>
               <Form.Control
                 as="input"
@@ -78,7 +78,7 @@ const Contact: React.FC = () => (
             </Form.Group>
           </Form.Row>
           <Form.Row className="justify-content-center">
-            <Form.Group as={Col} xs={4} controlId="Comment">
+            <Form.Group as={Col} lg={4} md={6} xs={8} controlId="Comment">
               <Form.Label>Comment</Form.Label>
               <Form.Control
                 as="textarea"
@@ -103,7 +103,7 @@ const Contact: React.FC = () => (
         </Form>
       )}
     </Formik>
-  </div>
+  </section>
 );
 
 export default Contact;
