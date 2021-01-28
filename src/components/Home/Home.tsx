@@ -7,11 +7,8 @@ const Home: React.FC = () => (
     <Container>
       <Row className="justify-content-center">
         <Col lg={6} sm={9} xs={12}>
-          <p className="h2">Fluid jumbotron</p>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
-          </p>
+          <p className="h2">The Lyon Republic</p>
+          <p>&quot;&quot;</p>
         </Col>
       </Row>
     </Container>

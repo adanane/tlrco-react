@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Contact.module.scss";
+import emailjs from "emailjs-com";
 import { Formik } from "formik";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import * as yup from "yup";
@@ -9,6 +10,24 @@ const schema = yup.object({
   email: yup.string().email().required(),
   comment: yup.string().required().min(25),
 });
+
+function sendEmail() {
+  emailjs
+    .sendForm(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      "#contact-form",
+      "YOUR_USER_ID"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+}
 
 const Contact: React.FC = () => (
   <section className={styles.Contact} id="contact">
@@ -22,7 +41,7 @@ const Contact: React.FC = () => (
     </Container>
     <Formik
       validationSchema={schema}
-      onSubmit={console.log}
+      onSubmit={sendEmail}
       initialValues={{
         name: "",
         email: "",
@@ -38,7 +57,7 @@ const Contact: React.FC = () => (
         isValid,
         errors,
       }) => (
-        <Form noValidate onSubmit={handleSubmit}>
+        <Form id="contact-form" noValidate onSubmit={handleSubmit}>
           <Form.Row className="justify-content-center">
             <Form.Group as={Col} lg={4} md={6} xs={8} controlId="name">
               <Form.Label>Name</Form.Label>
@@ -97,7 +116,7 @@ const Contact: React.FC = () => (
               </Form.Control.Feedback>
             </Form.Group>
           </Form.Row>
-          <Button type="submit" disabled={!isValid}>
+          <Button type="submit" disabled>
             Send
           </Button>
         </Form>
@@ -105,5 +124,9 @@ const Contact: React.FC = () => (
     </Formik>
   </section>
 );
+
+/**
+ * Change to <Button type="submit" disabled={!isValid}> when emailjs is set up.
+ */
 
 export default Contact;
