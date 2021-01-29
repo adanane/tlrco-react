@@ -6,11 +6,12 @@ import { Link } from "react-scroll";
 const Menu: React.FC = () => (
   <Navbar
     as="nav"
-    bg="light"
+    bg="dark"
     className={styles.Menu}
     collapseOnSelect
     expand="lg"
     fixed="top"
+    variant="dark"
   >
     <Navbar.Brand as={Link} smooth spy to="home">
       TLRCO

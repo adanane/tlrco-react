@@ -116,7 +116,7 @@ const Contact: React.FC = () => (
               </Form.Control.Feedback>
             </Form.Group>
           </Form.Row>
-          <Button type="submit" disabled>
+          <Button disabled type="submit" variant="warning">
             Send
           </Button>
         </Form>
@@ -126,7 +126,7 @@ const Contact: React.FC = () => (
 );
 
 /**
- * Change to <Button type="submit" disabled={!isValid}> when emailjs is set up.
+ * Change to <Button disabled={!isValid}> when emailjs is set up.
  */
 
 export default Contact;

@@ -1,5 +1,6 @@
 .Home {
   align-items: center;
+  background-color: slategray;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url("../../images/home.jpg");
   background-position: center center;
@@ -8,5 +9,7 @@
   color: whitesmoke;
   height: 100vh;
   justify-content: center;
-  padding: auto;
+  img {
+    width: 30%;
+  }
 }
