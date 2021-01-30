@@ -1,14 +1,18 @@
 .Footer {
-    background-color: black;
-    padding: 75px 0;
-    div {
-      color: whitesmoke;
-      display: inline-block;
-      font-size: xx-large;
-      margin: 10px;
-      &:hover {
-        color: gold;
-      }
+  background-color: black;
+  padding: 75px 0;
+  button {
+    background: none;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    display: inline-block;
+    font-size: xx-large;
+    margin: 10px;
+    outline: inherit;
+    padding: 0;
+    &:hover {
+      color: gold;
     }
   }
-  
+}

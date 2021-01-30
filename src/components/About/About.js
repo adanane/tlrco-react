@@ -1,10 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './About.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./About.module.scss";
 import { Col, Container, Row } from "react-bootstrap";
 
 const About = () => (
-  <Container as="section" className={styles.About} data-testid="About" fluid id="about">
+  <Container
+    as="section"
+    className={styles.About}
+    data-testid="About"
+    fluid
+    id="about"
+  >
     <Row className="justify-content-center">
       <Col lg={6} md={9} xs={12}>
         <p className="h2">We Are</p>
@@ -20,7 +26,7 @@ const About = () => (
   </Container>
 );
 
-About.propTypes = {};
+About.propTypes = { PropTypes };
 
 About.defaultProps = {};
 

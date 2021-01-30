@@ -3,27 +3,34 @@ import PropTypes from "prop-types";
 import styles from "./Footer.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookSquare,
   faInstagramSquare,
   faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => (
   <footer className={styles.Footer} data-testid="Footer" fluid id="footer">
-    <div>
-      <FontAwesomeIcon icon={faFacebookSquare} />
-    </div>
-    <div>
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        window.open("https://instagram.com/", "_blank");
+      }}
+    >
       <FontAwesomeIcon icon={faInstagramSquare} />
-    </div>
-    <div>
+    </button>
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        window.open("https://twitter.com/", "_blank");
+      }}
+    >
       <FontAwesomeIcon icon={faTwitterSquare} />
-    </div>
+    </button>
     <p>&copy; TLRCO MMXXI</p>
   </footer>
 );
+// Make sure links are updated
 
-Footer.propTypes = {};
+Footer.propTypes = { PropTypes };
 
 Footer.defaultProps = {};
 

@@ -1,10 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Manifesto.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Manifesto.module.scss";
 import { Col, Container, Row } from "react-bootstrap";
 
 const Manifesto = () => (
-  <Container as="section" className={styles.Manifesto} data-testid="Manifesto" fluid id="manifesto">
+  <Container
+    as="section"
+    className={styles.Manifesto}
+    data-testid="Manifesto"
+    fluid
+    id="manifesto"
+  >
     <Row className="justify-content-center">
       <Col lg={6} md={9} xs={12}>
         <p className="h2">Manifesto</p>
@@ -65,7 +71,7 @@ const Manifesto = () => (
   </Container>
 );
 
-Manifesto.propTypes = {};
+Manifesto.propTypes = { PropTypes };
 
 Manifesto.defaultProps = {};
 

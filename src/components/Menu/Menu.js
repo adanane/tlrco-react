@@ -11,7 +11,7 @@ const Menu = () => (
     className={styles.Menu}
     collapseOnSelect
     data-testid="Menu"
-    expand="lg"
+    expand="md"
     fixed="top"
     id="menu"
     variant="dark"
@@ -36,7 +36,7 @@ const Menu = () => (
   </Navbar>
 );
 
-Menu.propTypes = {};
+Menu.propTypes = { PropTypes };
 
 Menu.defaultProps = {};
 

@@ -12,6 +12,7 @@ const schema = yup.object({
   comment: yup.string().required().min(25),
 });
 
+// Check out emailjs.com to see how to fill the service id, template id and user id
 function sendEmail() {
   emailjs
     .sendForm(
@@ -126,7 +127,7 @@ const Contact = () => (
   </section>
 );
 
-Contact.propTypes = {};
+Contact.propTypes = { PropTypes };
 
 Contact.defaultProps = {};
 
