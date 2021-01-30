@@ -5,7 +5,7 @@ import logo from "../../images/logo.png";
 import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 
 const Home = () => (
-  <Jumbotron as="header" className={styles.Home} data-testid="Home" fluid>
+  <Jumbotron as="header" className={styles.Home} data-testid="Home" fluid id="home">
        <Container>
       <Row className="justify-content-center">
         <Col>

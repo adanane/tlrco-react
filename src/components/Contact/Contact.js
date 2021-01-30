@@ -31,7 +31,7 @@ function sendEmail() {
 }
 
 const Contact = () => (
-  <section className={styles.Contact} data-testid="Contact">
+  <section className={styles.Contact} data-testid="Contact" fluid id="contact">
     <Container fluid>
       <Row className="justify-content-center">
         <Col lg={6}>

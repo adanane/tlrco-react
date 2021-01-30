@@ -10,10 +10,11 @@ const Menu = () => (
     bg="dark"
     className={styles.Menu}
     collapseOnSelect
+    data-testid="Menu"
     expand="lg"
     fixed="top"
+    id="menu"
     variant="dark"
-    data-testid="Menu"
   >
     <Navbar.Brand as={Link} smooth spy to="home">
       TLRCO

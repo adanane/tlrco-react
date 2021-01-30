@@ -4,7 +4,7 @@ import styles from './About.module.scss';
 import { Col, Container, Row } from "react-bootstrap";
 
 const About = () => (
-  <Container as="section" className={styles.About} data-testid="About" fluid>
+  <Container as="section" className={styles.About} data-testid="About" fluid id="about">
     <Row className="justify-content-center">
       <Col lg={6} md={9} xs={12}>
         <p className="h2">We Are</p>

@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => (
-  <footer className={styles.Footer} data-testid="Footer">
+  <footer className={styles.Footer} data-testid="Footer" fluid id="footer">
     <div>
       <FontAwesomeIcon icon={faFacebookSquare} />
     </div>
