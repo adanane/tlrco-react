@@ -1,11 +1,12 @@
-import React from "react";
-import styles from "./Home.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Home.module.scss';
 import logo from "../../images/logo.png";
 import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 
-const Home: React.FC = () => (
-  <Jumbotron as="header" fluid className={styles.Home} id="home">
-    <Container>
+const Home = () => (
+  <Jumbotron as="header" className={styles.Home} data-testid="Home" fluid>
+       <Container>
       <Row className="justify-content-center">
         <Col>
           <img alt="THE LYON REPUBLIC" src={logo} />
@@ -14,5 +15,9 @@ const Home: React.FC = () => (
     </Container>
   </Jumbotron>
 );
+
+Home.propTypes = {};
+
+Home.defaultProps = {};
 
 export default Home;

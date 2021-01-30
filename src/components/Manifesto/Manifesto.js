@@ -1,9 +1,10 @@
-import React from "react";
-import styles from "./Manifesto.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Manifesto.module.scss';
 import { Col, Container, Row } from "react-bootstrap";
 
-const Manifesto: React.FC = () => (
-  <Container as="section" className={styles.Manifesto} fluid id="manifesto">
+const Manifesto = () => (
+  <Container as="section" className={styles.Manifesto} data-testid="Manifesto" fluid>
     <Row className="justify-content-center">
       <Col lg={6} md={9} xs={12}>
         <p className="h2">Manifesto</p>
@@ -63,5 +64,9 @@ const Manifesto: React.FC = () => (
     </Row>
   </Container>
 );
+
+Manifesto.propTypes = {};
+
+Manifesto.defaultProps = {};
 
 export default Manifesto;

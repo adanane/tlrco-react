@@ -1,15 +1,16 @@
 .Home {
-  align-items: center;
-  background-color: slategray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("../../images/home.jpg");
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  color: whitesmoke;
-  height: 100vh;
-  justify-content: center;
-  img {
-    width: 30%;
+    align-items: center;
+    background-color: slategray;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url("../../images/home.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    color: whitesmoke;
+    height: 100vh;
+    justify-content: center;
+    img {
+      width: 30%;
+    }
   }
-}
+  

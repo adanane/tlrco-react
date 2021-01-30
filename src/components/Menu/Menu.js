@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./Menu.module.scss";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-scroll";
 
-const Menu: React.FC = () => (
+const Menu = () => (
   <Navbar
     as="nav"
     bg="dark"
@@ -12,6 +13,7 @@ const Menu: React.FC = () => (
     expand="lg"
     fixed="top"
     variant="dark"
+    data-testid="Menu"
   >
     <Navbar.Brand as={Link} smooth spy to="home">
       TLRCO
@@ -32,5 +34,9 @@ const Menu: React.FC = () => (
     </Navbar.Collapse>
   </Navbar>
 );
+
+Menu.propTypes = {};
+
+Menu.defaultProps = {};
 
 export default Menu;

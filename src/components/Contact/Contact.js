@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./Contact.module.scss";
 import emailjs from "emailjs-com";
 import { Formik } from "formik";
@@ -29,8 +30,8 @@ function sendEmail() {
     );
 }
 
-const Contact: React.FC = () => (
-  <section className={styles.Contact} id="contact">
+const Contact = () => (
+  <section className={styles.Contact} data-testid="Contact">
     <Container fluid>
       <Row className="justify-content-center">
         <Col lg={6}>
@@ -125,8 +126,8 @@ const Contact: React.FC = () => (
   </section>
 );
 
-/**
- * Change to <Button disabled={!isValid}> when emailjs is set up.
- */
+Contact.propTypes = {};
+
+Contact.defaultProps = {};
 
 export default Contact;
